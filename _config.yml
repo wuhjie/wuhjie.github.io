@@ -114,5 +114,5 @@ theme: Cactus
 #deployment
 deploy: 
   type: git
-  repository: git@github.com:wuhjie/wuhjie.github.io.git
+  repository: https://github.com:wuhjie/wuhjie.github.io.git
   branch: master
