@@ -102,16 +102,17 @@ copyright:
 
 # Include / Exclude file(s)
 ## include:/exclude: options only apply to the 'source/' folder
-include:
-exclude:
-ignore:
+# include:
+# exclude:
+# ignore:
 
 # Extensions
 theme: Cactus
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 
-deploy:
+#deployment
+deploy: 
   type: git
-  repository: https://github.com/wuhjie/wuhjie.github.io.git
+  repository: git@github.com:wuhjie/wuhjie.github.io.git
   branch: master
