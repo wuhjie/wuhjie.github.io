@@ -1,5 +1,5 @@
 /* body
-   ¸ü¶à¾«Æ·Ä£°åÇë·ÃÎÊ£ºhttp://www.bootstrapmb.com
+   ï¿½ï¿½ï¿½à¾«Æ·Ä£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê£ï¿½http://www.bootstrapmb.com
 */
 body{
     background: url('../images/bg.png') no-repeat  fixed  ;
@@ -11,7 +11,7 @@ body{
 .nav-left ul.navigate li:first-child,.toggle-sm ul.navigate li:first-child,
 .nav-left ul.ico-social li i:hover,.toggle-sm ul.ico-social li i:hover,
 .section-about h3,.section-about .client h5,.section-contact .social i:hover,
-.section-about .client span,.section-about .about-h-2 span {color: #ff4ba8 }
+.section-about .client span,.section-about .about-h-2 span {color: rgba(189, 192, 186,.75)}
 
 .section-about,.toggle-sm ul.navigate li,.nav-left ul.navigate li{padding-left: 20px;}
 
@@ -35,7 +35,7 @@ body{
 
 .nav-left ul.navigate{margin-left: -15px}
 
-.nav-left ul.navigate li:first-child,.toggle-sm ul.navigate li:first-child { border-left: 5px solid #ff4ba8}
+.nav-left ul.navigate li:first-child,.toggle-sm ul.navigate li:first-child { border-left: 5px solid rgba(189, 192, 186,.75)}
 
 .nav-left ul.navigate li{margin-top: 60px;cursor: pointer;}
 
@@ -84,7 +84,7 @@ text-align: center
 .section-contact h3,.section-contact .contact-h {font-weight:300;}
 
 .section-about .about-h,.section-work .work-h,
-.section-labs .labs-h,.section-contact .contact-h {border-bottom: 3px solid #ff4ba8;}
+.section-labs .labs-h,.section-contact .contact-h {border-bottom: 3px solid rgba(189, 192, 186,.75);}
 
 .section-about .about-h {width: 110px}
 
@@ -102,13 +102,13 @@ text-align: center
 .section-about h3{font-weight:400;}
 
 .section-about p{margin-top: 50px;}
-.section-contact .btn,.section-about .bt1{background-color: #ff4ba8;}
+.section-contact .btn,.section-about .bt1{background-color: rgba(189, 192, 186,.75);}
 
 .section-about .bt1,.section-about .bt2,
 .section-contact textarea,.section-contact input,
 .section-contact .btn {border-radius: 0;}
 
-.section-about .bt1,.section-contact .btn{border-color:  #ff4ba8;}
+.section-about .bt1,.section-contact .btn{border-color:  rgba(189, 192, 186,.75);}
 
 .section-about .bt1,.section-about .bt2,.section-contact textarea:focus ,
 body,.section-contact input:focus,.section-contact .btn {color: #fff !important;}
