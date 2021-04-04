@@ -15,7 +15,7 @@ $(document).ready(function () {
         $('.section-work').fadeOut();
         $('.section-labs').fadeOut();
         $('.section-contact').fadeOut();
-        $(this).css({"color": "#ea469e", "border-left": "5px solid #ff4ba8"}).end();
+        $(this).css({"color": "#bdc0ba", "border-left": "5px solid #bdc0ba"}).end();
         one1.css({"color": "#fff", "border-left": "0px solid transparent"}).end();
         two2.css({"color": "#fff", "border-left": "0px solid transparent"}).end();
         three3.css({"color": "#fff", "border-left": "0px solid transparent"});
@@ -28,7 +28,7 @@ $(document).ready(function () {
         $('.section-work').fadeIn();
         $('.section-labs').fadeOut();
         $('.section-contact').fadeOut();
-        $(this).css({"color": "#ea469e", "border-left": "5px solid #ff4ba8"}).end();
+        $(this).css({"color": "#bdc0ba", "border-left": "5px solid #bdc0ba"}).end();
         zero0.css({"color": "#fff", "border-left": "0px solid transparent"}).end();
         two2.css({"color": "#fff", "border-left": "0px solid transparent"}).end();
         three3.css({"color": "#fff", "border-left": "0px solid transparent"});
@@ -40,7 +40,7 @@ $(document).ready(function () {
         $('.section-work').fadeOut();
         $('.section-contact').fadeOut();
         $('.section-labs').fadeIn();
-        $(this).css({"color": "#ea469e", "border-left": "5px solid #ff4ba8"}).end();
+        $(this).css({"color": "#bdc0ba", "border-left": "5px solid #bdc0ba"}).end();
         zero0.css({"color": "#fff", "border-left": "0px solid transparent"}).end();
         one1.css({"color": "#fff", "border-left": "0px solid transparent"}).end();
         three3.css({"color": "#fff", "border-left": "0px solid transparent"});
@@ -52,7 +52,7 @@ $(document).ready(function () {
         $('.section-work').fadeOut();
         $('.section-labs').fadeOut();
         $('.section-contact').fadeIn();
-        $(this).css({"color": "#ea469e", "border-left": "5px solid #ff4ba8"}).end();
+        $(this).css({"color": "#bdc0ba", "border-left": "5px solid #bdc0ba"}).end();
         zero0.css({"color": "#fff", "border-left": "0px solid transparent"}).end();
         one1.css({"color": "#fff", "border-left": "0px solid transparent"}).end();
         two2.css({"color": "#fff", "border-left": "0px solid transparent"});

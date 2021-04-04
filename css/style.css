@@ -155,7 +155,7 @@ span.h3{
     position: absolute;
     top:35px;
     left: 70px;
-    color: #454b67;
+    color: #787d7b;
     max-width:100%
 }
 /*
@@ -218,9 +218,9 @@ span.h3{
 
 .section-contact .contact-h,.section-labs .labs-h{margin-bottom: 30px}
 
-.section-labs .card{background-color: #1e1a34;}
+.section-labs .card{background-color: #787d7b;}
 
-.section-labs  .card-text:last-child{color: #5a5572}
+.section-labs  .card-text:last-child{color: #373c38}
 
  .section-labs .card a { color: rgba(189, 192, 186,.75); display: block; }
 
