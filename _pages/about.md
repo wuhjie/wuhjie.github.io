@@ -1,6 +1,6 @@
 ---
 permalink: /
-title: "Hongjie Wu"
+title: "吴鸿捷"
 excerpt: "About me"
 author_profile: true
 redirect_from: 
