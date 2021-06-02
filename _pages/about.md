@@ -16,5 +16,5 @@ You could find my cv here.
 
 Here is my <a href="/_data/_work/work.html"></i>photography protfolio</a></li>
 
-Here is my [photography protfolio](https://wuhjie.github.io/work.html)
+Here is my [photography protfolio](https://wuhjie.github.io/work)
 
