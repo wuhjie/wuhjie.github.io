@@ -14,7 +14,5 @@ You could find my cv here.
   [English version](https://wuhjie.github.io/files/cv_eng.pdf)
   [Chinese version](https://wuhjie.github.io/files/cv_cn.pdf)
 
-Here is my <a href="/_data/_work/work.html"></i>photography protfolio</a></li>
-
 Here is my [photography protfolio](https://wuhjie.github.io/work)
 
