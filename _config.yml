@@ -175,7 +175,7 @@ kramdown:
 
 # Collections
 collections:
-  portfolio:
+  project:
     output: true
     permalink: /:collection/:path/
 
@@ -189,10 +189,10 @@ defaults:
     values:
       layout: single
       author_profile: true
-  # _portfolio
+  # _project
   - scope:
       path: ""
-      type: portfolio
+      type: project
     values:
       layout: single
       author_profile: true
