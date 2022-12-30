@@ -10,7 +10,7 @@ theme = "gokarna"
 enableRobotsTXT = true
 
 [params]
-    avatarURL = "images/avatar/w.JPG"
+    avatarURL = "/images/avatar/w.JPG"
     avatarSize = "size-l"
 
     description = "Hello, world!"
@@ -22,6 +22,28 @@ enableRobotsTXT = true
         {name = "instagram", url = "https://www.instagram.com/wwwwwww_uuu/"},
         {name = "email", url = "mailto:wu.hongjie@outlook.com"}    
     ]
+
+    footer = "wuhjie"
+
+    customHeadHTML = '''
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css" integrity="sha384-Xi8rHCmBmhbuyyhbI88391ZKP2dmfnOl4rT9ZfRI7mLTdk1wblIUnrIq35nqwEvC" crossorigin="anonymous">
+      <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.js" integrity="sha384-X/XCfMm41VSsqRNQgDerQczD69XqmjOOOwYQvr/uuC+j4OPoNhVgjdGFwhvN02Ja" crossorigin="anonymous"></script>
+      <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/auto-render.min.js" integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR" crossorigin="anonymous"></script>
+      <script>
+        document.addEventListener("DOMContentLoaded", function() {
+          renderMathInElement(document.body, {
+            // customised options
+            // • auto-render specific keys, e.g.:
+            delimiters: [
+              {left: '$$', right: '$$', display: true},
+              {left: '$', right: '$', display: false},
+            ],
+            // • rendering keys, e.g.:
+            throwOnError : false
+          });
+        });
+      </script>
+    '''
 
 
 [menu]
@@ -57,3 +79,8 @@ enableRobotsTXT = true
     # We use feather-icons: https://feathericons.com/
     pre = "<span data-feather='github'></span>"
 
+[markup]
+  [markup.tableOfContents]
+    startLevel = 1
+    endLevel = 3
+    ordered = false

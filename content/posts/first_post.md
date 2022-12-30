@@ -5,6 +5,7 @@ description: "A blog post"
 image: "/path/to/image.png"
 type: "post"
 tags: ["blog"]
+showTableOfContents: true
 ---
 
 # Hello World!
