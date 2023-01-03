@@ -6,4 +6,4 @@ type: "page"
 
 mememe
 
-(this website is still under development, pls find me on [linkedin](https://www.linkedin.com/in/wuhjie/) directly if you wish to know about me. :)
+(this website is still under development, plz find me on [linkedin](https://www.linkedin.com/in/wuhjie/) directly if you wish to know about me. :)
