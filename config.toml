@@ -13,7 +13,7 @@ enableRobotsTXT = true
     avatarURL = "/images/avatar/w.JPG"
     avatarSize = "size-l"
 
-    description = "Hello, world!"
+    description = "---"
 
     accentColor = "#91B493"
 
@@ -70,14 +70,14 @@ enableRobotsTXT = true
     name = "Tags"
     url = "/tags/"
     weight = 2
-    
+
   [[menu.main]]
-    identifier = "github"
-    url = "https://github.com"
+    identifier = "aboutme"
+    name = "About me"
+    url = "/wuhjie/"
     weight = 3
+  
     
-    # We use feather-icons: https://feathericons.com/
-    pre = "<span data-feather='github'></span>"
 
 [markup]
   [markup.tableOfContents]
