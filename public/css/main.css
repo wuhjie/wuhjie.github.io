@@ -2,10 +2,10 @@
   --content-width: 1120px;
   --container-width: 810px;
 
-  --light-primary-color: #282a21;
+  --light-primary-color: 255, 255, 255;
   --light-secondary-color: #dddddd;
   --light-tertiary-color: #272822;
-  --light-text-color: black;
+  --light-text-color: #0d1f20;
 }
 
 @font-face {
@@ -21,7 +21,7 @@
 }
 
 html {
-  background-color: var(--light-primary-color);
+  background-color: rgb(var(--light-primary-color));
   color: var(--light-text-color);
   font-family: "Lato", sans-serif;
   font-size: 17.5px;
