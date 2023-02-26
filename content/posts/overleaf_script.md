@@ -2,7 +2,7 @@
 title: "Overleaf Scripts"
 date: 2023-02-26
 type: "post"
-tags: ["Utilities"]
+tags: ["Utility"]
 showTableOfContents: True
 ---
 

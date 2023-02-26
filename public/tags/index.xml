@@ -8,11 +8,20 @@
     <language>en</language>
     <lastBuildDate>Sun, 26 Feb 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://wuhjie.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Utilities</title>
-      <link>https://wuhjie.github.io/tags/utilities/</link>
+      <title>Note</title>
+      <link>https://wuhjie.github.io/tags/note/</link>
       <pubDate>Sun, 26 Feb 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://wuhjie.github.io/tags/utilities/</guid>
+      <guid>https://wuhjie.github.io/tags/note/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Utility</title>
+      <link>https://wuhjie.github.io/tags/utility/</link>
+      <pubDate>Sun, 26 Feb 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://wuhjie.github.io/tags/utility/</guid>
       <description></description>
     </item>
     
