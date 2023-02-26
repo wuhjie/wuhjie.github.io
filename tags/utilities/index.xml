@@ -1,1 +1,20 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Utilities on Hongjie Wu</title><link>https://wuhjie.github.io/tags/utilities/</link><description>Recent content in Utilities on Hongjie Wu</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sun, 26 Feb 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://wuhjie.github.io/tags/utilities/index.xml" rel="self" type="application/rss+xml"/><item><title>Overleaf Scripts</title><link>https://wuhjie.github.io/posts/2023_02_26_overleaf_script/</link><pubDate>Sun, 26 Feb 2023 00:00:00 +0000</pubDate><guid>https://wuhjie.github.io/posts/2023_02_26_overleaf_script/</guid><description>Useful Scipts that I used in Overleaf Figures \begin{figure}[h] \begin{subfigure}{0.5\textwidth} \centering \includegraphics[scale=0.2]{--} \caption{---} \label{---} \end{subfigure} \hfill \begin{subfigure}{0.5\textwidth} \centering \includegraphics[scale=0.2]{--} \caption{---} \label{---} \end{subfigure} \caption{---} \label{4.3_dag} \end{figure} \begin{figure}[h] \centering \includegraphics[scale=0.2]{---} \caption{---} \label{---} \end{figure} \begin{figure}[H] \subfloat[]{% \begin{minipage}{\linewidth} \centering \includegraphics[width=.7\linewidth]{Project101/res/project_excution/pie.png} \end{minipage}% }\par \subfloat[]{% \begin{minipage}{\linewidth} \centering \includegraphics[width=.7\linewidth]{Project101/res/project_excution/line.png} \end{minipage}% }\par \subfloat[]{% \begin{minipage}{\linewidth} \centering \includegraphics[width=.7\linewidth]{Project101/res/project_excution/bar.png} \end{minipage}% } \caption{Question displayed and the TSRI scale} \label{qandtsri} \end{figure} Tables \begin{table}[H] \begin{center} \begin{tabular}{||c c c c||} \hline Col1 &amp;amp; Col2 &amp;amp; Col2 &amp;amp; Col3 \\ [0.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Utilities on Hongjie Wu</title>
+    <link>https://wuhjie.github.io/tags/utilities/</link>
+    <description>Recent content in Utilities on Hongjie Wu</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 26 Feb 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://wuhjie.github.io/tags/utilities/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Overleaf Scripts</title>
+      <link>https://wuhjie.github.io/posts/2023_02_26_overleaf_script/</link>
+      <pubDate>Sun, 26 Feb 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://wuhjie.github.io/posts/2023_02_26_overleaf_script/</guid>
+      <description>Useful Scipts that I used in Overleaf Figures \begin{figure}[h] \begin{subfigure}{0.5\textwidth} \centering \includegraphics[scale=0.2]{--} \caption{---} \label{---} \end{subfigure} \hfill \begin{subfigure}{0.5\textwidth} \centering \includegraphics[scale=0.2]{--} \caption{---} \label{---} \end{subfigure} \caption{---} \label{4.3_dag} \end{figure} \begin{figure}[h] \centering \includegraphics[scale=0.2]{---} \caption{---} \label{---} \end{figure} \begin{figure}[H] \subfloat[]{% \begin{minipage}{\linewidth} \centering \includegraphics[width=.7\linewidth]{Project101/res/project_excution/pie.png} \end{minipage}% }\par \subfloat[]{% \begin{minipage}{\linewidth} \centering \includegraphics[width=.7\linewidth]{Project101/res/project_excution/line.png} \end{minipage}% }\par \subfloat[]{% \begin{minipage}{\linewidth} \centering \includegraphics[width=.7\linewidth]{Project101/res/project_excution/bar.png} \end{minipage}% } \caption{Question displayed and the TSRI scale} \label{qandtsri} \end{figure} Tables \begin{table}[H] \begin{center} \begin{tabular}{||c c c c||} \hline Col1 &amp;amp; Col2 &amp;amp; Col2 &amp;amp; Col3 \\ [0.</description>
+    </item>
+    
+  </channel>
+</rss>
