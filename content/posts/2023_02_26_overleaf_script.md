@@ -1,9 +1,9 @@
 ---
-title: "Overleaf script"
+title: "Overleaf Scripts"
 date: 2023-02-26
 type: "post"
 tags: ["Utilities"]
-showTableOfContents: 
+showTableOfContents: True
 ---
 
 ## Useful Scipts that I used in Overleaf
