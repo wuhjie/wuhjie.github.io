@@ -4,7 +4,7 @@ languageCode = "en"
 
 title = "Hongjie Wu"
 
-theme = "gokarna"
+theme = "gokarna_w"
 
 # Automatically generate robots.txt
 enableRobotsTXT = true
