@@ -13,14 +13,16 @@ enableRobotsTXT = true
     avatarURL = "/images/avatar/w.JPG"
     avatarSize = "size-l"
 
-    description = "---"
+    description = ""
 
     accentColor = "#91B493"
 
     socialIcons = [
+        {name = "github", url = "https://github.com/wuhjie/"},
         {name = "linkedin", url = "https://www.linkedin.com/in/wuhjie/"},
         {name = "instagram", url = "https://www.instagram.com/wwwwwww_uuu/"},
         {name = "email", url = "mailto:wu.hongjie@outlook.com"}    
+
     ]
 
     footer = "wuhjie"
