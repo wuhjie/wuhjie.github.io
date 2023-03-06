@@ -6,7 +6,6 @@ tags: ["Note"]
 showTableOfContents: True
 ---
 
-
 ## 0 Core frame
 
 ### 2 pointer for array

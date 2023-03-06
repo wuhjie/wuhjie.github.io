@@ -60,20 +60,20 @@ enableRobotsTXT = true
     post = ""
 
     # Display name
-    name = "Posts"
+    name = "/Posts"
 
     # Weights are used to determine the ordering
     weight = 1
 
   [[menu.main]]
     identifier = "tags"
-    name = "Tags"
+    name = "/Tags"
     url = "/tags/"
     weight = 2
 
   [[menu.main]]
     identifier = "aboutme"
-    name = "About me"
+    name = "/About"
     url = "/wuhjie/"
     weight = 3
   
