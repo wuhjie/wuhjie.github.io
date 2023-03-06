@@ -6,7 +6,6 @@ tags: ["Note"]
 showTableOfContents: True
 ---
 
-# [Labuladong](https://labuladong.github.io/algo/) notes
 
 ## 0 Core frame
 
@@ -463,25 +462,29 @@ private void slidingWindow(string s) {
 
    ```
 
-### House Robber
-1. 
-
 ## 1 Data Structure
 
 ### Linked list
 
-#### 19. [Remove nth node from end of list](https://leetcode.com/problems/remove-nth-node-from-end-of-list/)
-1. 2 pointer
-   1. p1 -> kth and p2 -> when p1 is pointed to kth node
-   2. when p1 reaches the end, p2 point to the kth from the end
-2. Time difficulty: O(N)
+### Array
 
-#### 21. [Merge two sorted lists](https://leetcode.com/problems/merge-two-sorted-lists/)
+#### Prefix
 
-1. recursion solves
-2. compare and 
+1. use a list to remember the sum before and use it in the future calculation
+2. example
+```java
+class NumArray {
+    private int[] preSum;
 
-
-#### 25. [Reverse Nodes in k-Group](https://leetcode.com/problems/reverse-linked-list/)
-1. divide the problem into sub question
-2. use reverse and group to solve the problem
+    public NumArray(int[] nums) {
+        preSum = new int[nums.length + 1];
+        for (int i = 1; i < preSum.length; i++) {
+            preSum[i] = preSum[i - 1] + nums[i - 1];
+        }
+    }
+    
+    public int sumRange(int left, int right) {
+        return preSum[right + 1] - preSum[left];
+    }
+}
+```
