@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Hongjie Wu</title>
+    <title>WuJot</title>
     <link>https://wuhjie.github.io/</link>
-    <description>Recent content on Hongjie Wu</description>
+    <description>Recent content on WuJot</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 26 Feb 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://wuhjie.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 20 Mar 2023 10:20:51 +0000</lastBuildDate><atom:link href="https://wuhjie.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Labuladong Notes</title>
       <link>https://wuhjie.github.io/posts/labuladong/</link>

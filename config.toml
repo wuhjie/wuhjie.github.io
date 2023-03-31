@@ -2,7 +2,7 @@ baseURL = "https://wuhjie.github.io"
 defaultContentLanguage = "en"
 languageCode = "en"
 
-title = "Hongjie Wu"
+title = "WuJot"
 
 theme = "gokarna"
 
@@ -73,11 +73,13 @@ enableRobotsTXT = true
     url = "/tags/"
     weight = 2
 
+
+
   [[menu.main]]
     identifier = "aboutme"
     name = "/About"
     url = "/wuhjie/"
-    weight = 3
+    weight = 4
   
     
 

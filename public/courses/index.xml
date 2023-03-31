@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>WuJot</title>
-    <link>https://wuhjie.github.io/wuhjie/</link>
+    <link>https://wuhjie.github.io/courses/</link>
     <description>Recent content on WuJot</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 03 Jan 2023 14:40:51 +0000</lastBuildDate><atom:link href="https://wuhjie.github.io/wuhjie/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 20 Mar 2023 10:20:51 +0000</lastBuildDate><atom:link href="https://wuhjie.github.io/courses/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
