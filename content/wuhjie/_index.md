@@ -12,5 +12,5 @@ Currently, I'm looking for entry-level job of SWE and MLE.
 
 ## Skills
 
-- Programming: Python, JAVA, C++, etc.
+- Programming: Python, JAVA, C++, C, etc.
 - Languages: English, Mandarin
