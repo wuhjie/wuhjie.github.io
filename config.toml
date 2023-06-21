@@ -21,7 +21,7 @@ enableRobotsTXT = true
         {name = "github", url = "https://github.com/wuhjie/"},
         {name = "linkedin", url = "https://www.linkedin.com/in/wuhjie/"},
         {name = "instagram", url = "https://www.instagram.com/wwwwwww_uuu/"},
-        {name = "discord", url = "https://discordapp.com/users/690705987241508905},
+        {name = "discord", url = "https://discordapp.com/users/690705987241508905"},
         {name = "email", url = "mailto:wu.hongjie@outlook.com"}    
 
     ]
