@@ -81,14 +81,6 @@
         <div class="nav-links">
             
             <div class="nav-link">
-                <a href="https://wuhjie.github.io/posts/"> /Posts </a>
-            </div>
-            
-            <div class="nav-link">
-                <a href="https://wuhjie.github.io/tags/"> /Tags </a>
-            </div>
-            
-            <div class="nav-link">
                 <a href="https://wuhjie.github.io/wuhjie/"> /About </a>
             </div>
             
@@ -110,14 +102,6 @@
 
             
             <ul class="nav-hamburger-list visibility-hidden">
-                
-                <li class="nav-item">
-                    <a href="https://wuhjie.github.io/posts/"> /Posts </a>
-                </li>
-                
-                <li class="nav-item">
-                    <a href="https://wuhjie.github.io/tags/"> /Tags </a>
-                </li>
                 
                 <li class="nav-item">
                     <a href="https://wuhjie.github.io/wuhjie/"> /About </a>
@@ -174,79 +158,79 @@
 <ul>
 <li>Quick sort</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Java" data-lang="Java"><span style="display:flex;"><span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">sort</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> nums<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span> lo<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span> hi<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Java" data-lang="Java"><span style="display:flex;"><span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">sort</span>(<span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> nums, <span style="color:#66d9ef">int</span> lo, <span style="color:#66d9ef">int</span> hi) {
 </span></span><span style="display:flex;"><span>    <span style="color:#75715e">/****** preorder recursion ******/</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// breakpoint p
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">int</span> p <span style="color:#f92672">=</span> partition<span style="color:#f92672">(</span>nums<span style="color:#f92672">,</span> lo<span style="color:#f92672">,</span> hi<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// breakpoint p</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> p <span style="color:#f92672">=</span> partition(nums, lo, hi);
 </span></span><span style="display:flex;"><span>    <span style="color:#75715e">/************************/</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    sort<span style="color:#f92672">(</span>nums<span style="color:#f92672">,</span> lo<span style="color:#f92672">,</span> p <span style="color:#f92672">-</span> 1<span style="color:#f92672">);</span>
-</span></span><span style="display:flex;"><span>    sort<span style="color:#f92672">(</span>nums<span style="color:#f92672">,</span> p <span style="color:#f92672">+</span> 1<span style="color:#f92672">,</span> hi<span style="color:#f92672">);</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>    sort(nums, lo, p <span style="color:#f92672">-</span> 1);
+</span></span><span style="display:flex;"><span>    sort(nums, p <span style="color:#f92672">+</span> 1, hi);
+</span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><ul>
 <li>Merger sort</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Java" data-lang="Java"><span style="display:flex;"><span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">sort</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> nums<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span> lo<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span> hi<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> mid <span style="color:#f92672">=</span> <span style="color:#f92672">(</span>lo <span style="color:#f92672">+</span> hi<span style="color:#f92672">)</span> <span style="color:#f92672">/</span> 2<span style="color:#f92672">;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// order nums[lo..mid]
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    sort<span style="color:#f92672">(</span>nums<span style="color:#f92672">,</span> lo<span style="color:#f92672">,</span> mid<span style="color:#f92672">);</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e">//order nums[mid+1..hi]
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    sort<span style="color:#f92672">(</span>nums<span style="color:#f92672">,</span> mid <span style="color:#f92672">+</span> 1<span style="color:#f92672">,</span> hi<span style="color:#f92672">);</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Java" data-lang="Java"><span style="display:flex;"><span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">sort</span>(<span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> nums, <span style="color:#66d9ef">int</span> lo, <span style="color:#66d9ef">int</span> hi) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> mid <span style="color:#f92672">=</span> (lo <span style="color:#f92672">+</span> hi) <span style="color:#f92672">/</span> 2;
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// order nums[lo..mid]</span>
+</span></span><span style="display:flex;"><span>    sort(nums, lo, mid);
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">//order nums[mid+1..hi]</span>
+</span></span><span style="display:flex;"><span>    sort(nums, mid <span style="color:#f92672">+</span> 1, hi);
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>    <span style="color:#75715e">/****** postorder recursion ******/</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// merge nums[lo..mid] and nums[mid+1..hi]
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    merge<span style="color:#f92672">(</span>nums<span style="color:#f92672">,</span> lo<span style="color:#f92672">,</span> mid<span style="color:#f92672">,</span> hi<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// merge nums[lo..mid] and nums[mid+1..hi]</span>
+</span></span><span style="display:flex;"><span>    merge(nums, lo, mid, hi);
 </span></span><span style="display:flex;"><span>    <span style="color:#75715e">/*********************/</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div></li>
 <li>
 <p>pre/in/postorder</p>
 <ul>
 <li>traverse</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">traverse</span><span style="color:#f92672">(</span>TreeNode root<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>root <span style="color:#f92672">==</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span><span style="color:#f92672">;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// preorder
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    traverse<span style="color:#f92672">(</span>root<span style="color:#f92672">.</span><span style="color:#a6e22e">left</span><span style="color:#f92672">);</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// inorder
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    traverse<span style="color:#f92672">(</span>root<span style="color:#f92672">.</span><span style="color:#a6e22e">right</span><span style="color:#f92672">);</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// postorder
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#f92672">}</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">traverse</span>(TreeNode root) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (root <span style="color:#f92672">==</span> <span style="color:#66d9ef">null</span>) {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// preorder</span>
+</span></span><span style="display:flex;"><span>    traverse(root.<span style="color:#a6e22e">left</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// inorder</span>
+</span></span><span style="display:flex;"><span>    traverse(root.<span style="color:#a6e22e">right</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// postorder</span>
+</span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#75715e">/* iterate list */</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">traverse</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> arr<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span> i <span style="color:#f92672">&lt;</span> arr<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">;</span> i<span style="color:#f92672">++)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">traverse</span>(<span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> arr) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 0; i <span style="color:#f92672">&lt;</span> arr.<span style="color:#a6e22e">length</span>; i<span style="color:#f92672">++</span>) {
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e">/* recursse array */</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">traverse</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> arr<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span> i<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>i <span style="color:#f92672">==</span> arr<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span><span style="color:#f92672">;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// 前序位置
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    traverse<span style="color:#f92672">(</span>arr<span style="color:#f92672">,</span> i <span style="color:#f92672">+</span> 1<span style="color:#f92672">);</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// 后序位置
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">traverse</span>(<span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> arr, <span style="color:#66d9ef">int</span> i) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (i <span style="color:#f92672">==</span> arr.<span style="color:#a6e22e">length</span>) {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// 前序位置</span>
+</span></span><span style="display:flex;"><span>    traverse(arr, i <span style="color:#f92672">+</span> 1);
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// 后序位置</span>
+</span></span><span style="display:flex;"><span>}
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e">/* iterate list */</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">traverse</span><span style="color:#f92672">(</span>ListNode head<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span>ListNode p <span style="color:#f92672">=</span> head<span style="color:#f92672">;</span> p <span style="color:#f92672">!=</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">;</span> p <span style="color:#f92672">=</span> p<span style="color:#f92672">.</span><span style="color:#a6e22e">next</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">traverse</span>(ListNode head) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> (ListNode p <span style="color:#f92672">=</span> head; p <span style="color:#f92672">!=</span> <span style="color:#66d9ef">null</span>; p <span style="color:#f92672">=</span> p.<span style="color:#a6e22e">next</span>) {
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e">/* recurse list */</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">traverse</span><span style="color:#f92672">(</span>ListNode head<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>head <span style="color:#f92672">==</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span><span style="color:#f92672">;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// 前序位置
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    traverse<span style="color:#f92672">(</span>head<span style="color:#f92672">.</span><span style="color:#a6e22e">next</span><span style="color:#f92672">);</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// 后序位置
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">traverse</span>(ListNode head) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (head <span style="color:#f92672">==</span> <span style="color:#66d9ef">null</span>) {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// 前序位置</span>
+</span></span><span style="display:flex;"><span>    traverse(head.<span style="color:#a6e22e">next</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// 后序位置</span>
+</span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div></li>
 </ol>
 <h3 id="dynamic-programming">Dynamic Programming</h3>
@@ -278,14 +262,14 @@
 <li>template</li>
 </ol>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>result <span style="color:#f92672">=</span> <span style="color:#f92672">[]</span>
-</span></span><span style="display:flex;"><span>def <span style="color:#a6e22e">backtrack</span><span style="color:#f92672">(</span>route<span style="color:#f92672">,</span> choices<span style="color:#f92672">):</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> satisfied<span style="color:#f92672">:</span>
-</span></span><span style="display:flex;"><span>        result<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>route<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>def <span style="color:#a6e22e">backtrack</span>(route, choices):
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> satisfied:
+</span></span><span style="display:flex;"><span>        result.<span style="color:#a6e22e">add</span>(route)
 </span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span>
 </span></span><span style="display:flex;"><span>    
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> choice in choices<span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> choice in choices:
 </span></span><span style="display:flex;"><span>        make_decision
-</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">backtrack</span><span style="color:#f92672">(</span>route<span style="color:#f92672">,</span> choices<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">backtrack</span>(route, choices)
 </span></span><span style="display:flex;"><span>        cancel_decision
 </span></span></code></pre></div><h3 id="backtracking-for-ordergroupcombination">Backtracking for order/group/combination</h3>
 <ol>
@@ -299,67 +283,67 @@
 </ul>
 </li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#75715e">// subset/combination
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">backtrack</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> nums<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span> start<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> start<span style="color:#f92672">;</span> i <span style="color:#f92672">&lt;</span> nums<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">;</span> i<span style="color:#f92672">++)</span> <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>        track<span style="color:#f92672">.</span><span style="color:#a6e22e">addLast</span><span style="color:#f92672">(</span>nums<span style="color:#f92672">[</span>i<span style="color:#f92672">]);</span>
-</span></span><span style="display:flex;"><span>        backtrack<span style="color:#f92672">(</span>nums<span style="color:#f92672">,</span> i <span style="color:#f92672">+</span> 1<span style="color:#f92672">);</span>
-</span></span><span style="display:flex;"><span>        track<span style="color:#f92672">.</span><span style="color:#a6e22e">removeLast</span><span style="color:#f92672">();</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#75715e">// subset/combination</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">backtrack</span>(<span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> nums, <span style="color:#66d9ef">int</span> start) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> start; i <span style="color:#f92672">&lt;</span> nums.<span style="color:#a6e22e">length</span>; i<span style="color:#f92672">++</span>) {
+</span></span><span style="display:flex;"><span>        track.<span style="color:#a6e22e">addLast</span>(nums<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span>);
+</span></span><span style="display:flex;"><span>        backtrack(nums, i <span style="color:#f92672">+</span> 1);
+</span></span><span style="display:flex;"><span>        track.<span style="color:#a6e22e">removeLast</span>();
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">// order    
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">backtrack</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> nums<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span> i <span style="color:#f92672">&lt;</span> nums<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">;</span> i<span style="color:#f92672">++)</span> <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>used<span style="color:#f92672">[</span>i<span style="color:#f92672">])</span> <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">continue</span><span style="color:#f92672">;</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// order    </span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">backtrack</span>(<span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> nums) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 0; i <span style="color:#f92672">&lt;</span> nums.<span style="color:#a6e22e">length</span>; i<span style="color:#f92672">++</span>) {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> (used<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span>) {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">continue</span>;
+</span></span><span style="display:flex;"><span>        }
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>        used<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span><span style="color:#f92672">;</span>
-</span></span><span style="display:flex;"><span>        track<span style="color:#f92672">.</span><span style="color:#a6e22e">addLast</span><span style="color:#f92672">(</span>nums<span style="color:#f92672">[</span>i<span style="color:#f92672">]);</span>
-</span></span><span style="display:flex;"><span>        backtrack<span style="color:#f92672">(</span>nums<span style="color:#f92672">);</span>
-</span></span><span style="display:flex;"><span>        track<span style="color:#f92672">.</span><span style="color:#a6e22e">removeLast</span><span style="color:#f92672">();</span>
-</span></span><span style="display:flex;"><span>        used<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">false</span><span style="color:#f92672">;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>        used<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span>;
+</span></span><span style="display:flex;"><span>        track.<span style="color:#a6e22e">addLast</span>(nums<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span>);
+</span></span><span style="display:flex;"><span>        backtrack(nums);
+</span></span><span style="display:flex;"><span>        track.<span style="color:#a6e22e">removeLast</span>();
+</span></span><span style="display:flex;"><span>        used<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">false</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><ul>
 <li>Elements not distinct and could not be repeatedly chosen</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>Arrays<span style="color:#f92672">.</span><span style="color:#a6e22e">sort</span><span style="color:#f92672">(</span>nums<span style="color:#f92672">);</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">// subset/combination
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">backtrack</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> nums<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span> start<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>Arrays.<span style="color:#a6e22e">sort</span>(nums);
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// subset/combination</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">backtrack</span>(<span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> nums, <span style="color:#66d9ef">int</span> start) {
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> start<span style="color:#f92672">;</span> i <span style="color:#f92672">&lt;</span> nums<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">;</span> i<span style="color:#f92672">++)</span> <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>i <span style="color:#f92672">&gt;</span> start <span style="color:#f92672">&amp;&amp;</span> nums<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span> <span style="color:#f92672">==</span> nums<span style="color:#f92672">[</span>i <span style="color:#f92672">-</span> 1<span style="color:#f92672">])</span> <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">continue</span><span style="color:#f92672">;</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> start; i <span style="color:#f92672">&lt;</span> nums.<span style="color:#a6e22e">length</span>; i<span style="color:#f92672">++</span>) {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> (i <span style="color:#f92672">&gt;</span> start <span style="color:#f92672">&amp;&amp;</span> nums<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span> <span style="color:#f92672">==</span> nums<span style="color:#f92672">[</span>i <span style="color:#f92672">-</span> 1<span style="color:#f92672">]</span>) {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">continue</span>;
+</span></span><span style="display:flex;"><span>        }
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>        track<span style="color:#f92672">.</span><span style="color:#a6e22e">addLast</span><span style="color:#f92672">(</span>nums<span style="color:#f92672">[</span>i<span style="color:#f92672">]);</span>
-</span></span><span style="display:flex;"><span>        backtrack<span style="color:#f92672">(</span>nums<span style="color:#f92672">,</span> i <span style="color:#f92672">+</span> 1<span style="color:#f92672">);</span>
-</span></span><span style="display:flex;"><span>        track<span style="color:#f92672">.</span><span style="color:#a6e22e">removeLast</span><span style="color:#f92672">();</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>        track.<span style="color:#a6e22e">addLast</span>(nums<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span>);
+</span></span><span style="display:flex;"><span>        backtrack(nums, i <span style="color:#f92672">+</span> 1);
+</span></span><span style="display:flex;"><span>        track.<span style="color:#a6e22e">removeLast</span>();
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>Arrays<span style="color:#f92672">.</span><span style="color:#a6e22e">sort</span><span style="color:#f92672">(</span>nums<span style="color:#f92672">);</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">// order 
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">backtrack</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> nums<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span> i <span style="color:#f92672">&lt;</span> nums<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">;</span> i<span style="color:#f92672">++)</span> <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>used<span style="color:#f92672">[</span>i<span style="color:#f92672">])</span> <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">continue</span><span style="color:#f92672">;</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>Arrays.<span style="color:#a6e22e">sort</span>(nums);
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// order </span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">backtrack</span>(<span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> nums) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 0; i <span style="color:#f92672">&lt;</span> nums.<span style="color:#a6e22e">length</span>; i<span style="color:#f92672">++</span>) {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> (used<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span>) {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">continue</span>;
+</span></span><span style="display:flex;"><span>        }
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>i <span style="color:#f92672">&gt;</span> 0 <span style="color:#f92672">&amp;&amp;</span> nums<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span> <span style="color:#f92672">==</span> nums<span style="color:#f92672">[</span>i <span style="color:#f92672">-</span> 1<span style="color:#f92672">]</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#f92672">!</span>used<span style="color:#f92672">[</span>i <span style="color:#f92672">-</span> 1<span style="color:#f92672">])</span> <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">continue</span><span style="color:#f92672">;</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> (i <span style="color:#f92672">&gt;</span> 0 <span style="color:#f92672">&amp;&amp;</span> nums<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span> <span style="color:#f92672">==</span> nums<span style="color:#f92672">[</span>i <span style="color:#f92672">-</span> 1<span style="color:#f92672">]</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#f92672">!</span>used<span style="color:#f92672">[</span>i <span style="color:#f92672">-</span> 1<span style="color:#f92672">]</span>) {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">continue</span>;
+</span></span><span style="display:flex;"><span>        }
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>        used<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span><span style="color:#f92672">;</span>
-</span></span><span style="display:flex;"><span>        track<span style="color:#f92672">.</span><span style="color:#a6e22e">addLast</span><span style="color:#f92672">(</span>nums<span style="color:#f92672">[</span>i<span style="color:#f92672">]);</span>
-</span></span><span style="display:flex;"><span>        backtrack<span style="color:#f92672">(</span>nums<span style="color:#f92672">);</span>
-</span></span><span style="display:flex;"><span>        track<span style="color:#f92672">.</span><span style="color:#a6e22e">removeLast</span><span style="color:#f92672">();</span>
-</span></span><span style="display:flex;"><span>        used<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">false</span><span style="color:#f92672">;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>        used<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span>;
+</span></span><span style="display:flex;"><span>        track.<span style="color:#a6e22e">addLast</span>(nums<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span>);
+</span></span><span style="display:flex;"><span>        backtrack(nums);
+</span></span><span style="display:flex;"><span>        track.<span style="color:#a6e22e">removeLast</span>();
+</span></span><span style="display:flex;"><span>        used<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">false</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><ul>
 <li>Subsets/combination:</li>
 <li>Elements distinct and could be repeatedly chosen
@@ -368,58 +352,58 @@
 </ul>
 </li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#75715e">// subset/combination
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">backtrack</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> nums<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span> start<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> start<span style="color:#f92672">;</span> i <span style="color:#f92672">&lt;</span> nums<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">;</span> i<span style="color:#f92672">++)</span> <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>        track<span style="color:#f92672">.</span><span style="color:#a6e22e">addLast</span><span style="color:#f92672">(</span>nums<span style="color:#f92672">[</span>i<span style="color:#f92672">]);</span>
-</span></span><span style="display:flex;"><span>        backtrack<span style="color:#f92672">(</span>nums<span style="color:#f92672">,</span> i<span style="color:#f92672">);</span>
-</span></span><span style="display:flex;"><span>        track<span style="color:#f92672">.</span><span style="color:#a6e22e">removeLast</span><span style="color:#f92672">();</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#75715e">// subset/combination</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">backtrack</span>(<span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> nums, <span style="color:#66d9ef">int</span> start) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> start; i <span style="color:#f92672">&lt;</span> nums.<span style="color:#a6e22e">length</span>; i<span style="color:#f92672">++</span>) {
+</span></span><span style="display:flex;"><span>        track.<span style="color:#a6e22e">addLast</span>(nums<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span>);
+</span></span><span style="display:flex;"><span>        backtrack(nums, i);
+</span></span><span style="display:flex;"><span>        track.<span style="color:#a6e22e">removeLast</span>();
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">// order
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">backtrack</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> nums<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span> i <span style="color:#f92672">&lt;</span> nums<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">;</span> i<span style="color:#f92672">++)</span> <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>        track<span style="color:#f92672">.</span><span style="color:#a6e22e">addLast</span><span style="color:#f92672">(</span>nums<span style="color:#f92672">[</span>i<span style="color:#f92672">]);</span>
-</span></span><span style="display:flex;"><span>        backtrack<span style="color:#f92672">(</span>nums<span style="color:#f92672">);</span>
-</span></span><span style="display:flex;"><span>        track<span style="color:#f92672">.</span><span style="color:#a6e22e">removeLast</span><span style="color:#f92672">();</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// order</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">backtrack</span>(<span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> nums) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 0; i <span style="color:#f92672">&lt;</span> nums.<span style="color:#a6e22e">length</span>; i<span style="color:#f92672">++</span>) {
+</span></span><span style="display:flex;"><span>        track.<span style="color:#a6e22e">addLast</span>(nums<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span>);
+</span></span><span style="display:flex;"><span>        backtrack(nums);
+</span></span><span style="display:flex;"><span>        track.<span style="color:#a6e22e">removeLast</span>();
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div></li>
 </ol>
 <h3 id="bfs">BFS</h3>
 <ol>
 <li>BFS would find the shortest route, but the cost would be much bigger than dfs</li>
 <li>frame
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">BFS</span><span style="color:#f92672">(</span>Node start<span style="color:#f92672">,</span> Node target<span style="color:#f92672">)</span>  <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>    Queue<span style="color:#f92672">&lt;</span>Node<span style="color:#f92672">&gt;</span> q<span style="color:#f92672">;</span>
-</span></span><span style="display:flex;"><span>    Set<span style="color:#f92672">&lt;</span>Node<span style="color:#f92672">&gt;</span> visited<span style="color:#f92672">;</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">BFS</span>(Node start, Node target)  {
+</span></span><span style="display:flex;"><span>    Queue<span style="color:#f92672">&lt;</span>Node<span style="color:#f92672">&gt;</span> q;
+</span></span><span style="display:flex;"><span>    Set<span style="color:#f92672">&lt;</span>Node<span style="color:#f92672">&gt;</span> visited;
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    q<span style="color:#f92672">.</span><span style="color:#a6e22e">offer</span><span style="color:#f92672">(</span>start<span style="color:#f92672">);</span>
-</span></span><span style="display:flex;"><span>    visited<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>start<span style="color:#f92672">);</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> step <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>    q.<span style="color:#a6e22e">offer</span>(start);
+</span></span><span style="display:flex;"><span>    visited.<span style="color:#a6e22e">add</span>(start);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> step <span style="color:#f92672">=</span> 0;
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">while</span> <span style="color:#f92672">(!</span>q<span style="color:#f92672">.</span><span style="color:#a6e22e">isEmpty</span><span style="color:#f92672">())</span> <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">int</span> sz <span style="color:#f92672">=</span> q<span style="color:#f92672">.</span><span style="color:#a6e22e">size</span><span style="color:#f92672">();</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">while</span> (<span style="color:#f92672">!</span>q.<span style="color:#a6e22e">isEmpty</span>()) {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">int</span> sz <span style="color:#f92672">=</span> q.<span style="color:#a6e22e">size</span>();
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span> i <span style="color:#f92672">&lt;</span> sz<span style="color:#f92672">;</span> i<span style="color:#f92672">++)</span> <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>            Node cur <span style="color:#f92672">=</span> q<span style="color:#f92672">.</span><span style="color:#a6e22e">poll</span><span style="color:#f92672">();</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 0; i <span style="color:#f92672">&lt;</span> sz; i<span style="color:#f92672">++</span>) {
+</span></span><span style="display:flex;"><span>            Node cur <span style="color:#f92672">=</span> q.<span style="color:#a6e22e">poll</span>();
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>cur is target<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> (cur is target) {
 </span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">return</span> step
-</span></span><span style="display:flex;"><span>            <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>            }
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span>Node x <span style="color:#f92672">:</span> cur<span style="color:#f92672">.</span><span style="color:#a6e22e">adj</span><span style="color:#f92672">())</span> <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>x not in visited<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>                    q<span style="color:#f92672">.</span><span style="color:#a6e22e">offer</span><span style="color:#f92672">(</span>x<span style="color:#f92672">);</span>
-</span></span><span style="display:flex;"><span>                    visited<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>x<span style="color:#f92672">);</span>
-</span></span><span style="display:flex;"><span>                <span style="color:#f92672">}</span>
-</span></span><span style="display:flex;"><span>            <span style="color:#f92672">}</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">for</span> (Node x : cur.<span style="color:#a6e22e">adj</span>()) {
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">if</span> (x not in visited) {
+</span></span><span style="display:flex;"><span>                    q.<span style="color:#a6e22e">offer</span>(x);
+</span></span><span style="display:flex;"><span>                    visited.<span style="color:#a6e22e">add</span>(x);
+</span></span><span style="display:flex;"><span>                }
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>        }
 </span></span><span style="display:flex;"><span>        step<span style="color:#f92672">++</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div></li>
 <li>BFS and DFS
 <ul>
@@ -436,182 +420,182 @@
 <h3 id="binary-search">Binary Search</h3>
 <ol>
 <li>Typically binary search
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">binarySearch</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> nums<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span> target<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> left <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span> 
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> right <span style="color:#f92672">=</span> nums<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span> <span style="color:#f92672">-</span> 1<span style="color:#f92672">;</span> 
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">binarySearch</span>(<span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> nums, <span style="color:#66d9ef">int</span> target) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> left <span style="color:#f92672">=</span> 0; 
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> right <span style="color:#f92672">=</span> nums.<span style="color:#a6e22e">length</span> <span style="color:#f92672">-</span> 1; 
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">while</span><span style="color:#f92672">(</span>left <span style="color:#f92672">&lt;=</span> right<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">int</span> mid <span style="color:#f92672">=</span> left <span style="color:#f92672">+</span> <span style="color:#f92672">(</span>right <span style="color:#f92672">-</span> left<span style="color:#f92672">)</span> <span style="color:#f92672">/</span> 2<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">while</span>(left <span style="color:#f92672">&lt;=</span> right) {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">int</span> mid <span style="color:#f92672">=</span> left <span style="color:#f92672">+</span> (right <span style="color:#f92672">-</span> left) <span style="color:#f92672">/</span> 2;
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span><span style="color:#f92672">(</span>nums<span style="color:#f92672">[</span>mid<span style="color:#f92672">]</span> <span style="color:#f92672">==</span> target<span style="color:#f92672">)</span> 
-</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> mid<span style="color:#f92672">;</span> <span style="color:#75715e">//
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>nums<span style="color:#f92672">[</span>mid<span style="color:#f92672">]</span> <span style="color:#f92672">&lt;</span> target<span style="color:#f92672">)</span>
-</span></span><span style="display:flex;"><span>            left <span style="color:#f92672">=</span> mid <span style="color:#f92672">+</span> 1<span style="color:#f92672">;</span> 
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>nums<span style="color:#f92672">[</span>mid<span style="color:#f92672">]</span> <span style="color:#f92672">&gt;</span> target<span style="color:#f92672">)</span>
-</span></span><span style="display:flex;"><span>            right <span style="color:#f92672">=</span> mid <span style="color:#f92672">-</span> 1<span style="color:#f92672">;</span> 
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span>(nums<span style="color:#f92672">[</span>mid<span style="color:#f92672">]</span> <span style="color:#f92672">==</span> target) 
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> mid; <span style="color:#75715e">//</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> (nums<span style="color:#f92672">[</span>mid<span style="color:#f92672">]</span> <span style="color:#f92672">&lt;</span> target)
+</span></span><span style="display:flex;"><span>            left <span style="color:#f92672">=</span> mid <span style="color:#f92672">+</span> 1; 
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> (nums<span style="color:#f92672">[</span>mid<span style="color:#f92672">]</span> <span style="color:#f92672">&gt;</span> target)
+</span></span><span style="display:flex;"><span>            right <span style="color:#f92672">=</span> mid <span style="color:#f92672">-</span> 1; 
+</span></span><span style="display:flex;"><span>    }
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#f92672">-</span>1<span style="color:#f92672">;</span> <span style="color:#75715e">//
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#f92672">-</span>1; <span style="color:#75715e">//</span>
+</span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><ul>
 <li>$&lt;$: the alg. starts with length-1</li>
 </ul>
 </li>
 <li>binary search for left bound
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">binarySearch_left</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> nums<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span> target<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> left <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span> 
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> right <span style="color:#f92672">=</span> nums<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">-</span>1<span style="color:#f92672">;</span> 
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">binarySearch_left</span>(<span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> nums, <span style="color:#66d9ef">int</span> target) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> left <span style="color:#f92672">=</span> 0; 
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> right <span style="color:#f92672">=</span> nums.<span style="color:#a6e22e">length</span><span style="color:#f92672">-</span>1; 
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">while</span><span style="color:#f92672">(</span>left <span style="color:#f92672">&lt;=</span> right<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">int</span> mid <span style="color:#f92672">=</span> left <span style="color:#f92672">+</span> <span style="color:#f92672">(</span>right <span style="color:#f92672">-</span> left<span style="color:#f92672">)</span> <span style="color:#f92672">/</span> 2<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">while</span>(left <span style="color:#f92672">&lt;=</span> right) {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">int</span> mid <span style="color:#f92672">=</span> left <span style="color:#f92672">+</span> (right <span style="color:#f92672">-</span> left) <span style="color:#f92672">/</span> 2;
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span><span style="color:#f92672">(</span>nums<span style="color:#f92672">[</span>mid<span style="color:#f92672">]</span> <span style="color:#f92672">==</span> target<span style="color:#f92672">)</span>
-</span></span><span style="display:flex;"><span>            right <span style="color:#f92672">=</span> mid <span style="color:#f92672">-</span> 1<span style="color:#f92672">;</span> <span style="color:#75715e">//
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>nums<span style="color:#f92672">[</span>mid<span style="color:#f92672">]</span> <span style="color:#f92672">&lt;</span> target<span style="color:#f92672">)</span>
-</span></span><span style="display:flex;"><span>            left <span style="color:#f92672">=</span> mid <span style="color:#f92672">+</span> 1<span style="color:#f92672">;</span> 
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>nums<span style="color:#f92672">[</span>mid<span style="color:#f92672">]</span> <span style="color:#f92672">&gt;</span> target<span style="color:#f92672">)</span>
-</span></span><span style="display:flex;"><span>            right <span style="color:#f92672">=</span> mid <span style="color:#f92672">-</span> 1<span style="color:#f92672">;</span> 
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span>(nums<span style="color:#f92672">[</span>mid<span style="color:#f92672">]</span> <span style="color:#f92672">==</span> target)
+</span></span><span style="display:flex;"><span>            right <span style="color:#f92672">=</span> mid <span style="color:#f92672">-</span> 1; <span style="color:#75715e">//</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> (nums<span style="color:#f92672">[</span>mid<span style="color:#f92672">]</span> <span style="color:#f92672">&lt;</span> target)
+</span></span><span style="display:flex;"><span>            left <span style="color:#f92672">=</span> mid <span style="color:#f92672">+</span> 1; 
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> (nums<span style="color:#f92672">[</span>mid<span style="color:#f92672">]</span> <span style="color:#f92672">&gt;</span> target)
+</span></span><span style="display:flex;"><span>            right <span style="color:#f92672">=</span> mid <span style="color:#f92672">-</span> 1; 
+</span></span><span style="display:flex;"><span>    }
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>left <span style="color:#f92672">==</span> nums<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">)</span> 
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#f92672">-</span>1<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (left <span style="color:#f92672">==</span> nums.<span style="color:#a6e22e">length</span>) 
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#f92672">-</span>1;
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> nums<span style="color:#f92672">[</span>left<span style="color:#f92672">]</span> <span style="color:#f92672">==</span> target <span style="color:#f92672">?</span> left <span style="color:#f92672">:</span> <span style="color:#f92672">-</span>1<span style="color:#f92672">;</span> <span style="color:#75715e">//
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> nums<span style="color:#f92672">[</span>left<span style="color:#f92672">]</span> <span style="color:#f92672">==</span> target <span style="color:#f92672">?</span> left : <span style="color:#f92672">-</span>1; <span style="color:#75715e">//</span>
+</span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div></li>
 <li>binary search for right bound
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">binarySearch_right</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> nums<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span> target<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> left <span style="color:#f92672">=</span> 0<span style="color:#f92672">,</span> right <span style="color:#f92672">=</span> nums<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span> <span style="color:#f92672">-</span> 1<span style="color:#f92672">;</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">binarySearch_right</span>(<span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> nums, <span style="color:#66d9ef">int</span> target) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> left <span style="color:#f92672">=</span> 0, right <span style="color:#f92672">=</span> nums.<span style="color:#a6e22e">length</span> <span style="color:#f92672">-</span> 1;
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">while</span> <span style="color:#f92672">(</span>left <span style="color:#f92672">&lt;=</span> right<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">int</span> mid <span style="color:#f92672">=</span> left <span style="color:#f92672">+</span> <span style="color:#f92672">(</span>right <span style="color:#f92672">-</span> left<span style="color:#f92672">)</span> <span style="color:#f92672">/</span> 2<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">while</span> (left <span style="color:#f92672">&lt;=</span> right) {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">int</span> mid <span style="color:#f92672">=</span> left <span style="color:#f92672">+</span> (right <span style="color:#f92672">-</span> left) <span style="color:#f92672">/</span> 2;
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>nums<span style="color:#f92672">[</span>mid<span style="color:#f92672">]</span> <span style="color:#f92672">==</span> target<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>            left <span style="color:#f92672">=</span> mid <span style="color:#f92672">+</span> 1<span style="color:#f92672">;</span> <span style="color:#75715e">//
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#f92672">}</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>nums<span style="color:#f92672">[</span>mid<span style="color:#f92672">]</span> <span style="color:#f92672">&lt;</span> target<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>            left <span style="color:#f92672">=</span> mid <span style="color:#f92672">+</span> 1<span style="color:#f92672">;</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>nums<span style="color:#f92672">[</span>mid<span style="color:#f92672">]</span> <span style="color:#f92672">&gt;</span> target<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>            right <span style="color:#f92672">=</span> mid <span style="color:#f92672">-</span> 1<span style="color:#f92672">;</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#f92672">}</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> (nums<span style="color:#f92672">[</span>mid<span style="color:#f92672">]</span> <span style="color:#f92672">==</span> target) {
+</span></span><span style="display:flex;"><span>            left <span style="color:#f92672">=</span> mid <span style="color:#f92672">+</span> 1; <span style="color:#75715e">//</span>
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> (nums<span style="color:#f92672">[</span>mid<span style="color:#f92672">]</span> <span style="color:#f92672">&lt;</span> target) {
+</span></span><span style="display:flex;"><span>            left <span style="color:#f92672">=</span> mid <span style="color:#f92672">+</span> 1;
+</span></span><span style="display:flex;"><span>        } <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> (nums<span style="color:#f92672">[</span>mid<span style="color:#f92672">]</span> <span style="color:#f92672">&gt;</span> target) {
+</span></span><span style="display:flex;"><span>            right <span style="color:#f92672">=</span> mid <span style="color:#f92672">-</span> 1;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>left <span style="color:#f92672">-</span> 1 <span style="color:#f92672">&lt;</span> 0<span style="color:#f92672">)</span> 
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#f92672">-</span>1<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (left <span style="color:#f92672">-</span> 1 <span style="color:#f92672">&lt;</span> 0) 
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#f92672">-</span>1;
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> nums<span style="color:#f92672">[</span>left <span style="color:#f92672">-</span> 1<span style="color:#f92672">]</span> <span style="color:#f92672">==</span> target <span style="color:#f92672">?</span> <span style="color:#f92672">(</span>left <span style="color:#f92672">-</span> 1<span style="color:#f92672">)</span> <span style="color:#f92672">:</span> <span style="color:#f92672">-</span>1<span style="color:#f92672">;</span> <span style="color:#75715e">//
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> nums<span style="color:#f92672">[</span>left <span style="color:#f92672">-</span> 1<span style="color:#f92672">]</span> <span style="color:#f92672">==</span> target <span style="color:#f92672">?</span> (left <span style="color:#f92672">-</span> 1) : <span style="color:#f92672">-</span>1; <span style="color:#75715e">//</span>
+</span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div></li>
 </ol>
 <h3 id="slide-window">Slide Window</h3>
 <ol>
 <li>structure</li>
 </ol>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">int</span> left <span style="color:#f92672">=</span> 0<span style="color:#f92672">,</span> right <span style="color:#f92672">=</span> 0
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">int</span> left <span style="color:#f92672">=</span> 0, right <span style="color:#f92672">=</span> 0
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">while</span> <span style="color:#f92672">(</span>right <span style="color:#f92672">&lt;</span> s<span style="color:#f92672">.</span><span style="color:#a6e22e">size</span><span style="color:#f92672">())</span> <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>    window<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>s<span style="color:#f92672">[</span>right<span style="color:#f92672">]);</span>
-</span></span><span style="display:flex;"><span>    right<span style="color:#f92672">++;</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">while</span> (right <span style="color:#f92672">&lt;</span> s.<span style="color:#a6e22e">size</span>()) {
+</span></span><span style="display:flex;"><span>    window.<span style="color:#a6e22e">add</span>(s<span style="color:#f92672">[</span>right<span style="color:#f92672">]</span>);
+</span></span><span style="display:flex;"><span>    right<span style="color:#f92672">++</span>;
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">while</span> <span style="color:#f92672">(</span>window needs shrink<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>        window<span style="color:#f92672">.</span><span style="color:#a6e22e">remove</span><span style="color:#f92672">(</span>s<span style="color:#f92672">[</span>left<span style="color:#f92672">]);</span>
-</span></span><span style="display:flex;"><span>        left<span style="color:#f92672">++;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
-</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">private</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">slidingWindow</span><span style="color:#f92672">(</span>string s<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>    unordered_map<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">char</span><span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span> window<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">while</span> (window needs shrink) {
+</span></span><span style="display:flex;"><span>        window.<span style="color:#a6e22e">remove</span>(s<span style="color:#f92672">[</span>left<span style="color:#f92672">]</span>);
+</span></span><span style="display:flex;"><span>        left<span style="color:#f92672">++</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">private</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">slidingWindow</span>(string s) {
+</span></span><span style="display:flex;"><span>    unordered_map<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">char</span>, <span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span> window;
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> left <span style="color:#f92672">=</span> 0<span style="color:#f92672">,</span> right <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> left <span style="color:#f92672">=</span> 0, right <span style="color:#f92672">=</span> 0;
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">while</span> <span style="color:#f92672">(</span>right <span style="color:#f92672">&lt;</span> s<span style="color:#f92672">.</span><span style="color:#a6e22e">size</span><span style="color:#f92672">())</span> <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">char</span> c <span style="color:#f92672">=</span> s<span style="color:#f92672">[</span>right<span style="color:#f92672">];</span>
-</span></span><span style="display:flex;"><span>        right<span style="color:#f92672">++;</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#f92672">...</span> <span style="color:#75715e">// in-window update
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
-</span></span><span style="display:flex;"><span>        <span style="color:#75715e">//debug
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        printf<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;window: [%d, %d)\n&#34;</span><span style="color:#f92672">,</span> left<span style="color:#f92672">,</span> right<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">while</span> (right <span style="color:#f92672">&lt;</span> s.<span style="color:#a6e22e">size</span>()) {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">char</span> c <span style="color:#f92672">=</span> s<span style="color:#f92672">[</span>right<span style="color:#f92672">]</span>;
+</span></span><span style="display:flex;"><span>        right<span style="color:#f92672">++</span>;
+</span></span><span style="display:flex;"><span>        ... <span style="color:#75715e">// in-window update</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">while</span> <span style="color:#f92672">(</span>window needs shrink<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">//debug</span>
+</span></span><span style="display:flex;"><span>        printf(<span style="color:#e6db74">&#34;window: [%d, %d)\n&#34;</span>, left, right);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">while</span> (window needs shrink) {
 </span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">char</span> d <span style="color:#f92672">=</span> s<span style="color:#f92672">[</span>left<span style="color:#f92672">]</span>
-</span></span><span style="display:flex;"><span>            left<span style="color:#f92672">++;</span>
-</span></span><span style="display:flex;"><span>            <span style="color:#f92672">...</span> <span style="color:#75715e">// in-window update
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#f92672">}</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>            left<span style="color:#f92672">++</span>;
+</span></span><span style="display:flex;"><span>            ... <span style="color:#75715e">// in-window update</span>
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><pre><code>- time: O(N)
 </code></pre>
 <h3 id="stock-sell">Stock sell</h3>
 <ol>
 <li>use state machine</li>
 <li>all-in-one
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#75715e">// k limit, cooldown and fee
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">maxProfit_all_in_one</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> max_k<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> prices<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span> cooldown<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span> fee<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>     <span style="color:#66d9ef">int</span> n <span style="color:#f92672">=</span> prices<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">;</span>
-</span></span><span style="display:flex;"><span>     <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>n <span style="color:#f92672">&lt;=</span> 0<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>         <span style="color:#66d9ef">return</span> 0<span style="color:#f92672">;</span>
-</span></span><span style="display:flex;"><span>     <span style="color:#f92672">}</span>
-</span></span><span style="display:flex;"><span>     <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>max_k <span style="color:#f92672">&gt;</span> n <span style="color:#f92672">/</span> 2<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>         <span style="color:#75715e">// no limit of k
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>         <span style="color:#66d9ef">return</span> maxProfit_k_inf<span style="color:#f92672">(</span>prices<span style="color:#f92672">,</span> cooldown<span style="color:#f92672">,</span> fee<span style="color:#f92672">);</span>
-</span></span><span style="display:flex;"><span>     <span style="color:#f92672">}</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#75715e">// k limit, cooldown and fee</span>
+</span></span><span style="display:flex;"><span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">maxProfit_all_in_one</span>(<span style="color:#66d9ef">int</span> max_k, <span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> prices, <span style="color:#66d9ef">int</span> cooldown, <span style="color:#66d9ef">int</span> fee) {
+</span></span><span style="display:flex;"><span>     <span style="color:#66d9ef">int</span> n <span style="color:#f92672">=</span> prices.<span style="color:#a6e22e">length</span>;
+</span></span><span style="display:flex;"><span>     <span style="color:#66d9ef">if</span> (n <span style="color:#f92672">&lt;=</span> 0) {
+</span></span><span style="display:flex;"><span>         <span style="color:#66d9ef">return</span> 0;
+</span></span><span style="display:flex;"><span>     }
+</span></span><span style="display:flex;"><span>     <span style="color:#66d9ef">if</span> (max_k <span style="color:#f92672">&gt;</span> n <span style="color:#f92672">/</span> 2) {
+</span></span><span style="display:flex;"><span>         <span style="color:#75715e">// no limit of k</span>
+</span></span><span style="display:flex;"><span>         <span style="color:#66d9ef">return</span> maxProfit_k_inf(prices, cooldown, fee);
+</span></span><span style="display:flex;"><span>     }
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>     <span style="color:#66d9ef">int</span><span style="color:#f92672">[][][]</span> dp <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#66d9ef">int</span><span style="color:#f92672">[</span>n<span style="color:#f92672">][</span>max_k <span style="color:#f92672">+</span> 1<span style="color:#f92672">][</span>2<span style="color:#f92672">];</span>
-</span></span><span style="display:flex;"><span>     <span style="color:#75715e">// k = 0 base case
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>     <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span> i <span style="color:#f92672">&lt;</span> n<span style="color:#f92672">;</span> i<span style="color:#f92672">++)</span> <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>         dp<span style="color:#f92672">[</span>i<span style="color:#f92672">][</span>0<span style="color:#f92672">][</span>1<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> Integer<span style="color:#f92672">.</span><span style="color:#a6e22e">MIN_VALUE</span><span style="color:#f92672">;</span>
-</span></span><span style="display:flex;"><span>         dp<span style="color:#f92672">[</span>i<span style="color:#f92672">][</span>0<span style="color:#f92672">][</span>0<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span>
-</span></span><span style="display:flex;"><span>     <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>     <span style="color:#66d9ef">int</span><span style="color:#f92672">[][][]</span> dp <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#66d9ef">int</span><span style="color:#f92672">[</span>n<span style="color:#f92672">][</span>max_k <span style="color:#f92672">+</span> 1<span style="color:#f92672">][</span>2<span style="color:#f92672">]</span>;
+</span></span><span style="display:flex;"><span>     <span style="color:#75715e">// k = 0 base case</span>
+</span></span><span style="display:flex;"><span>     <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 0; i <span style="color:#f92672">&lt;</span> n; i<span style="color:#f92672">++</span>) {
+</span></span><span style="display:flex;"><span>         dp<span style="color:#f92672">[</span>i<span style="color:#f92672">][</span>0<span style="color:#f92672">][</span>1<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> Integer.<span style="color:#a6e22e">MIN_VALUE</span>;
+</span></span><span style="display:flex;"><span>         dp<span style="color:#f92672">[</span>i<span style="color:#f92672">][</span>0<span style="color:#f92672">][</span>0<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> 0;
+</span></span><span style="display:flex;"><span>     }
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>     <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span> i <span style="color:#f92672">&lt;</span> n<span style="color:#f92672">;</span> i<span style="color:#f92672">++)</span> 
-</span></span><span style="display:flex;"><span>         <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> k <span style="color:#f92672">=</span> max_k<span style="color:#f92672">;</span> k <span style="color:#f92672">&gt;=</span> 1<span style="color:#f92672">;</span> k<span style="color:#f92672">--)</span> <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>             <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>i <span style="color:#f92672">-</span> 1 <span style="color:#f92672">==</span> <span style="color:#f92672">-</span>1<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>                 <span style="color:#75715e">// base case 1
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>                 dp<span style="color:#f92672">[</span>i<span style="color:#f92672">][</span>k<span style="color:#f92672">][</span>0<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span>
-</span></span><span style="display:flex;"><span>                 dp<span style="color:#f92672">[</span>i<span style="color:#f92672">][</span>k<span style="color:#f92672">][</span>1<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> <span style="color:#f92672">-</span>prices<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span> <span style="color:#f92672">-</span> fee<span style="color:#f92672">;</span>
-</span></span><span style="display:flex;"><span>                 <span style="color:#66d9ef">continue</span><span style="color:#f92672">;</span>
-</span></span><span style="display:flex;"><span>             <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>     <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 0; i <span style="color:#f92672">&lt;</span> n; i<span style="color:#f92672">++</span>) 
+</span></span><span style="display:flex;"><span>         <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> k <span style="color:#f92672">=</span> max_k; k <span style="color:#f92672">&gt;=</span> 1; k<span style="color:#f92672">--</span>) {
+</span></span><span style="display:flex;"><span>             <span style="color:#66d9ef">if</span> (i <span style="color:#f92672">-</span> 1 <span style="color:#f92672">==</span> <span style="color:#f92672">-</span>1) {
+</span></span><span style="display:flex;"><span>                 <span style="color:#75715e">// base case 1</span>
+</span></span><span style="display:flex;"><span>                 dp<span style="color:#f92672">[</span>i<span style="color:#f92672">][</span>k<span style="color:#f92672">][</span>0<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> 0;
+</span></span><span style="display:flex;"><span>                 dp<span style="color:#f92672">[</span>i<span style="color:#f92672">][</span>k<span style="color:#f92672">][</span>1<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> <span style="color:#f92672">-</span>prices<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span> <span style="color:#f92672">-</span> fee;
+</span></span><span style="display:flex;"><span>                 <span style="color:#66d9ef">continue</span>;
+</span></span><span style="display:flex;"><span>             }
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>             <span style="color:#75715e">// 包含 cooldown 的 base case
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>             <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>i <span style="color:#f92672">-</span> cooldown <span style="color:#f92672">-</span> 1 <span style="color:#f92672">&lt;</span> 0<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>                 <span style="color:#75715e">// base case 2
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>                 dp<span style="color:#f92672">[</span>i<span style="color:#f92672">][</span>k<span style="color:#f92672">][</span>0<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> Math<span style="color:#f92672">.</span><span style="color:#a6e22e">max</span><span style="color:#f92672">(</span>dp<span style="color:#f92672">[</span>i<span style="color:#f92672">-</span>1<span style="color:#f92672">][</span>k<span style="color:#f92672">][</span>0<span style="color:#f92672">],</span> dp<span style="color:#f92672">[</span>i<span style="color:#f92672">-</span>1<span style="color:#f92672">][</span>k<span style="color:#f92672">][</span>1<span style="color:#f92672">]</span> <span style="color:#f92672">+</span> prices<span style="color:#f92672">[</span>i<span style="color:#f92672">]);</span>
-</span></span><span style="display:flex;"><span>                 <span style="color:#75715e">// fee
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>                 dp<span style="color:#f92672">[</span>i<span style="color:#f92672">][</span>k<span style="color:#f92672">][</span>1<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> Math<span style="color:#f92672">.</span><span style="color:#a6e22e">max</span><span style="color:#f92672">(</span>dp<span style="color:#f92672">[</span>i<span style="color:#f92672">-</span>1<span style="color:#f92672">][</span>k<span style="color:#f92672">][</span>1<span style="color:#f92672">],</span> <span style="color:#f92672">-</span>prices<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span> <span style="color:#f92672">-</span> fee<span style="color:#f92672">);</span>
-</span></span><span style="display:flex;"><span>                 <span style="color:#66d9ef">continue</span><span style="color:#f92672">;</span>
-</span></span><span style="display:flex;"><span>             <span style="color:#f92672">}</span>
-</span></span><span style="display:flex;"><span>             dp<span style="color:#f92672">[</span>i<span style="color:#f92672">][</span>k<span style="color:#f92672">][</span>0<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> Math<span style="color:#f92672">.</span><span style="color:#a6e22e">max</span><span style="color:#f92672">(</span>dp<span style="color:#f92672">[</span>i<span style="color:#f92672">-</span>1<span style="color:#f92672">][</span>k<span style="color:#f92672">][</span>0<span style="color:#f92672">],</span> dp<span style="color:#f92672">[</span>i<span style="color:#f92672">-</span>1<span style="color:#f92672">][</span>k<span style="color:#f92672">][</span>1<span style="color:#f92672">]</span> <span style="color:#f92672">+</span> prices<span style="color:#f92672">[</span>i<span style="color:#f92672">]);</span>
-</span></span><span style="display:flex;"><span>             <span style="color:#75715e">// cooldown and fee
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>             dp<span style="color:#f92672">[</span>i<span style="color:#f92672">][</span>k<span style="color:#f92672">][</span>1<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> Math<span style="color:#f92672">.</span><span style="color:#a6e22e">max</span><span style="color:#f92672">(</span>dp<span style="color:#f92672">[</span>i<span style="color:#f92672">-</span>1<span style="color:#f92672">][</span>k<span style="color:#f92672">][</span>1<span style="color:#f92672">],</span> dp<span style="color:#f92672">[</span>i<span style="color:#f92672">-</span>cooldown<span style="color:#f92672">-</span>1<span style="color:#f92672">][</span>k<span style="color:#f92672">-</span>1<span style="color:#f92672">][</span>0<span style="color:#f92672">]</span> <span style="color:#f92672">-</span> prices<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span> <span style="color:#f92672">-</span> fee<span style="color:#f92672">);</span>     
-</span></span><span style="display:flex;"><span>         <span style="color:#f92672">}</span>
-</span></span><span style="display:flex;"><span>     <span style="color:#66d9ef">return</span> dp<span style="color:#f92672">[</span>n <span style="color:#f92672">-</span> 1<span style="color:#f92672">][</span>max_k<span style="color:#f92672">][</span>0<span style="color:#f92672">];</span>
-</span></span><span style="display:flex;"><span> <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>             <span style="color:#75715e">// 包含 cooldown 的 base case</span>
+</span></span><span style="display:flex;"><span>             <span style="color:#66d9ef">if</span> (i <span style="color:#f92672">-</span> cooldown <span style="color:#f92672">-</span> 1 <span style="color:#f92672">&lt;</span> 0) {
+</span></span><span style="display:flex;"><span>                 <span style="color:#75715e">// base case 2</span>
+</span></span><span style="display:flex;"><span>                 dp<span style="color:#f92672">[</span>i<span style="color:#f92672">][</span>k<span style="color:#f92672">][</span>0<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> Math.<span style="color:#a6e22e">max</span>(dp<span style="color:#f92672">[</span>i<span style="color:#f92672">-</span>1<span style="color:#f92672">][</span>k<span style="color:#f92672">][</span>0<span style="color:#f92672">]</span>, dp<span style="color:#f92672">[</span>i<span style="color:#f92672">-</span>1<span style="color:#f92672">][</span>k<span style="color:#f92672">][</span>1<span style="color:#f92672">]</span> <span style="color:#f92672">+</span> prices<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span>);
+</span></span><span style="display:flex;"><span>                 <span style="color:#75715e">// fee</span>
+</span></span><span style="display:flex;"><span>                 dp<span style="color:#f92672">[</span>i<span style="color:#f92672">][</span>k<span style="color:#f92672">][</span>1<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> Math.<span style="color:#a6e22e">max</span>(dp<span style="color:#f92672">[</span>i<span style="color:#f92672">-</span>1<span style="color:#f92672">][</span>k<span style="color:#f92672">][</span>1<span style="color:#f92672">]</span>, <span style="color:#f92672">-</span>prices<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span> <span style="color:#f92672">-</span> fee);
+</span></span><span style="display:flex;"><span>                 <span style="color:#66d9ef">continue</span>;
+</span></span><span style="display:flex;"><span>             }
+</span></span><span style="display:flex;"><span>             dp<span style="color:#f92672">[</span>i<span style="color:#f92672">][</span>k<span style="color:#f92672">][</span>0<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> Math.<span style="color:#a6e22e">max</span>(dp<span style="color:#f92672">[</span>i<span style="color:#f92672">-</span>1<span style="color:#f92672">][</span>k<span style="color:#f92672">][</span>0<span style="color:#f92672">]</span>, dp<span style="color:#f92672">[</span>i<span style="color:#f92672">-</span>1<span style="color:#f92672">][</span>k<span style="color:#f92672">][</span>1<span style="color:#f92672">]</span> <span style="color:#f92672">+</span> prices<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span>);
+</span></span><span style="display:flex;"><span>             <span style="color:#75715e">// cooldown and fee</span>
+</span></span><span style="display:flex;"><span>             dp<span style="color:#f92672">[</span>i<span style="color:#f92672">][</span>k<span style="color:#f92672">][</span>1<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> Math.<span style="color:#a6e22e">max</span>(dp<span style="color:#f92672">[</span>i<span style="color:#f92672">-</span>1<span style="color:#f92672">][</span>k<span style="color:#f92672">][</span>1<span style="color:#f92672">]</span>, dp<span style="color:#f92672">[</span>i<span style="color:#f92672">-</span>cooldown<span style="color:#f92672">-</span>1<span style="color:#f92672">][</span>k<span style="color:#f92672">-</span>1<span style="color:#f92672">][</span>0<span style="color:#f92672">]</span> <span style="color:#f92672">-</span> prices<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span> <span style="color:#f92672">-</span> fee);     
+</span></span><span style="display:flex;"><span>         }
+</span></span><span style="display:flex;"><span>     <span style="color:#66d9ef">return</span> dp<span style="color:#f92672">[</span>n <span style="color:#f92672">-</span> 1<span style="color:#f92672">][</span>max_k<span style="color:#f92672">][</span>0<span style="color:#f92672">]</span>;
+</span></span><span style="display:flex;"><span> }
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span> <span style="color:#75715e">// k no limit, fee and cooldown
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">maxProfit_k_inf</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> prices<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span> cooldown<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span> fee<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>     <span style="color:#66d9ef">int</span> n <span style="color:#f92672">=</span> prices<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">;</span>
-</span></span><span style="display:flex;"><span>     <span style="color:#66d9ef">int</span><span style="color:#f92672">[][]</span> dp <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#66d9ef">int</span><span style="color:#f92672">[</span>n<span style="color:#f92672">][</span>2<span style="color:#f92672">];</span>
-</span></span><span style="display:flex;"><span>     <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span> i <span style="color:#f92672">&lt;</span> n<span style="color:#f92672">;</span> i<span style="color:#f92672">++)</span> <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>         <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>i <span style="color:#f92672">-</span> 1 <span style="color:#f92672">==</span> <span style="color:#f92672">-</span>1<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>             <span style="color:#75715e">// base case 1
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>             dp<span style="color:#f92672">[</span>i<span style="color:#f92672">][</span>0<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span>
-</span></span><span style="display:flex;"><span>             dp<span style="color:#f92672">[</span>i<span style="color:#f92672">][</span>1<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> <span style="color:#f92672">-</span>prices<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span> <span style="color:#f92672">-</span> fee<span style="color:#f92672">;</span>
-</span></span><span style="display:flex;"><span>             <span style="color:#66d9ef">continue</span><span style="color:#f92672">;</span>
-</span></span><span style="display:flex;"><span>         <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span> <span style="color:#75715e">// k no limit, fee and cooldown</span>
+</span></span><span style="display:flex;"><span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">maxProfit_k_inf</span>(<span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> prices, <span style="color:#66d9ef">int</span> cooldown, <span style="color:#66d9ef">int</span> fee) {
+</span></span><span style="display:flex;"><span>     <span style="color:#66d9ef">int</span> n <span style="color:#f92672">=</span> prices.<span style="color:#a6e22e">length</span>;
+</span></span><span style="display:flex;"><span>     <span style="color:#66d9ef">int</span><span style="color:#f92672">[][]</span> dp <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#66d9ef">int</span><span style="color:#f92672">[</span>n<span style="color:#f92672">][</span>2<span style="color:#f92672">]</span>;
+</span></span><span style="display:flex;"><span>     <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 0; i <span style="color:#f92672">&lt;</span> n; i<span style="color:#f92672">++</span>) {
+</span></span><span style="display:flex;"><span>         <span style="color:#66d9ef">if</span> (i <span style="color:#f92672">-</span> 1 <span style="color:#f92672">==</span> <span style="color:#f92672">-</span>1) {
+</span></span><span style="display:flex;"><span>             <span style="color:#75715e">// base case 1</span>
+</span></span><span style="display:flex;"><span>             dp<span style="color:#f92672">[</span>i<span style="color:#f92672">][</span>0<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> 0;
+</span></span><span style="display:flex;"><span>             dp<span style="color:#f92672">[</span>i<span style="color:#f92672">][</span>1<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> <span style="color:#f92672">-</span>prices<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span> <span style="color:#f92672">-</span> fee;
+</span></span><span style="display:flex;"><span>             <span style="color:#66d9ef">continue</span>;
+</span></span><span style="display:flex;"><span>         }
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>         <span style="color:#75715e">// cooldown and base case
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>         <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>i <span style="color:#f92672">-</span> cooldown <span style="color:#f92672">-</span> 1 <span style="color:#f92672">&lt;</span> 0<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>             <span style="color:#75715e">// base case 2
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>             dp<span style="color:#f92672">[</span>i<span style="color:#f92672">][</span>0<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> Math<span style="color:#f92672">.</span><span style="color:#a6e22e">max</span><span style="color:#f92672">(</span>dp<span style="color:#f92672">[</span>i<span style="color:#f92672">-</span>1<span style="color:#f92672">][</span>0<span style="color:#f92672">],</span> dp<span style="color:#f92672">[</span>i<span style="color:#f92672">-</span>1<span style="color:#f92672">][</span>1<span style="color:#f92672">]</span> <span style="color:#f92672">+</span> prices<span style="color:#f92672">[</span>i<span style="color:#f92672">]);</span>
-</span></span><span style="display:flex;"><span>             <span style="color:#75715e">// fee
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>             dp<span style="color:#f92672">[</span>i<span style="color:#f92672">][</span>1<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> Math<span style="color:#f92672">.</span><span style="color:#a6e22e">max</span><span style="color:#f92672">(</span>dp<span style="color:#f92672">[</span>i<span style="color:#f92672">-</span>1<span style="color:#f92672">][</span>1<span style="color:#f92672">],</span> <span style="color:#f92672">-</span>prices<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span> <span style="color:#f92672">-</span> fee<span style="color:#f92672">);</span>
-</span></span><span style="display:flex;"><span>             <span style="color:#66d9ef">continue</span><span style="color:#f92672">;</span>
-</span></span><span style="display:flex;"><span>         <span style="color:#f92672">}</span>
-</span></span><span style="display:flex;"><span>         dp<span style="color:#f92672">[</span>i<span style="color:#f92672">][</span>0<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> Math<span style="color:#f92672">.</span><span style="color:#a6e22e">max</span><span style="color:#f92672">(</span>dp<span style="color:#f92672">[</span>i <span style="color:#f92672">-</span> 1<span style="color:#f92672">][</span>0<span style="color:#f92672">],</span> dp<span style="color:#f92672">[</span>i <span style="color:#f92672">-</span> 1<span style="color:#f92672">][</span>1<span style="color:#f92672">]</span> <span style="color:#f92672">+</span> prices<span style="color:#f92672">[</span>i<span style="color:#f92672">]);</span>
-</span></span><span style="display:flex;"><span>         <span style="color:#75715e">// cooldown and fee
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>         dp<span style="color:#f92672">[</span>i<span style="color:#f92672">][</span>1<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> Math<span style="color:#f92672">.</span><span style="color:#a6e22e">max</span><span style="color:#f92672">(</span>dp<span style="color:#f92672">[</span>i <span style="color:#f92672">-</span> 1<span style="color:#f92672">][</span>1<span style="color:#f92672">],</span> dp<span style="color:#f92672">[</span>i <span style="color:#f92672">-</span> cooldown <span style="color:#f92672">-</span> 1<span style="color:#f92672">][</span>0<span style="color:#f92672">]</span> <span style="color:#f92672">-</span> prices<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span> <span style="color:#f92672">-</span> fee<span style="color:#f92672">);</span>
-</span></span><span style="display:flex;"><span>     <span style="color:#f92672">}</span>
-</span></span><span style="display:flex;"><span>     <span style="color:#66d9ef">return</span> dp<span style="color:#f92672">[</span>n <span style="color:#f92672">-</span> 1<span style="color:#f92672">][</span>0<span style="color:#f92672">];</span>
-</span></span><span style="display:flex;"><span> <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>         <span style="color:#75715e">// cooldown and base case</span>
+</span></span><span style="display:flex;"><span>         <span style="color:#66d9ef">if</span> (i <span style="color:#f92672">-</span> cooldown <span style="color:#f92672">-</span> 1 <span style="color:#f92672">&lt;</span> 0) {
+</span></span><span style="display:flex;"><span>             <span style="color:#75715e">// base case 2</span>
+</span></span><span style="display:flex;"><span>             dp<span style="color:#f92672">[</span>i<span style="color:#f92672">][</span>0<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> Math.<span style="color:#a6e22e">max</span>(dp<span style="color:#f92672">[</span>i<span style="color:#f92672">-</span>1<span style="color:#f92672">][</span>0<span style="color:#f92672">]</span>, dp<span style="color:#f92672">[</span>i<span style="color:#f92672">-</span>1<span style="color:#f92672">][</span>1<span style="color:#f92672">]</span> <span style="color:#f92672">+</span> prices<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span>);
+</span></span><span style="display:flex;"><span>             <span style="color:#75715e">// fee</span>
+</span></span><span style="display:flex;"><span>             dp<span style="color:#f92672">[</span>i<span style="color:#f92672">][</span>1<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> Math.<span style="color:#a6e22e">max</span>(dp<span style="color:#f92672">[</span>i<span style="color:#f92672">-</span>1<span style="color:#f92672">][</span>1<span style="color:#f92672">]</span>, <span style="color:#f92672">-</span>prices<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span> <span style="color:#f92672">-</span> fee);
+</span></span><span style="display:flex;"><span>             <span style="color:#66d9ef">continue</span>;
+</span></span><span style="display:flex;"><span>         }
+</span></span><span style="display:flex;"><span>         dp<span style="color:#f92672">[</span>i<span style="color:#f92672">][</span>0<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> Math.<span style="color:#a6e22e">max</span>(dp<span style="color:#f92672">[</span>i <span style="color:#f92672">-</span> 1<span style="color:#f92672">][</span>0<span style="color:#f92672">]</span>, dp<span style="color:#f92672">[</span>i <span style="color:#f92672">-</span> 1<span style="color:#f92672">][</span>1<span style="color:#f92672">]</span> <span style="color:#f92672">+</span> prices<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span>);
+</span></span><span style="display:flex;"><span>         <span style="color:#75715e">// cooldown and fee</span>
+</span></span><span style="display:flex;"><span>         dp<span style="color:#f92672">[</span>i<span style="color:#f92672">][</span>1<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> Math.<span style="color:#a6e22e">max</span>(dp<span style="color:#f92672">[</span>i <span style="color:#f92672">-</span> 1<span style="color:#f92672">][</span>1<span style="color:#f92672">]</span>, dp<span style="color:#f92672">[</span>i <span style="color:#f92672">-</span> cooldown <span style="color:#f92672">-</span> 1<span style="color:#f92672">][</span>0<span style="color:#f92672">]</span> <span style="color:#f92672">-</span> prices<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span> <span style="color:#f92672">-</span> fee);
+</span></span><span style="display:flex;"><span>     }
+</span></span><span style="display:flex;"><span>     <span style="color:#66d9ef">return</span> dp<span style="color:#f92672">[</span>n <span style="color:#f92672">-</span> 1<span style="color:#f92672">][</span>0<span style="color:#f92672">]</span>;
+</span></span><span style="display:flex;"><span> }
 </span></span></code></pre></div></li>
 </ol>
 <h2 id="1-data-structure">1 Data Structure</h2>
@@ -622,20 +606,20 @@
 <li>use a list to remember the sum before and use it in the future calculation</li>
 <li>example</li>
 </ol>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">NumArray</span> <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> preSum<span style="color:#f92672">;</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">NumArray</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> preSum;
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">NumArray</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> nums<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>        preSum <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#66d9ef">int</span><span style="color:#f92672">[</span>nums<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span> <span style="color:#f92672">+</span> 1<span style="color:#f92672">];</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 1<span style="color:#f92672">;</span> i <span style="color:#f92672">&lt;</span> preSum<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">;</span> i<span style="color:#f92672">++)</span> <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>            preSum<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> preSum<span style="color:#f92672">[</span>i <span style="color:#f92672">-</span> 1<span style="color:#f92672">]</span> <span style="color:#f92672">+</span> nums<span style="color:#f92672">[</span>i <span style="color:#f92672">-</span> 1<span style="color:#f92672">];</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#f92672">}</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">NumArray</span>(<span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> nums) {
+</span></span><span style="display:flex;"><span>        preSum <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#66d9ef">int</span><span style="color:#f92672">[</span>nums.<span style="color:#a6e22e">length</span> <span style="color:#f92672">+</span> 1<span style="color:#f92672">]</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 1; i <span style="color:#f92672">&lt;</span> preSum.<span style="color:#a6e22e">length</span>; i<span style="color:#f92672">++</span>) {
+</span></span><span style="display:flex;"><span>            preSum<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> preSum<span style="color:#f92672">[</span>i <span style="color:#f92672">-</span> 1<span style="color:#f92672">]</span> <span style="color:#f92672">+</span> nums<span style="color:#f92672">[</span>i <span style="color:#f92672">-</span> 1<span style="color:#f92672">]</span>;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
 </span></span><span style="display:flex;"><span>    
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">sumRange</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> left<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span> right<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> preSum<span style="color:#f92672">[</span>right <span style="color:#f92672">+</span> 1<span style="color:#f92672">]</span> <span style="color:#f92672">-</span> preSum<span style="color:#f92672">[</span>left<span style="color:#f92672">];</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">sumRange</span>(<span style="color:#66d9ef">int</span> left, <span style="color:#66d9ef">int</span> right) {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> preSum<span style="color:#f92672">[</span>right <span style="color:#f92672">+</span> 1<span style="color:#f92672">]</span> <span style="color:#f92672">-</span> preSum<span style="color:#f92672">[</span>left<span style="color:#f92672">]</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div>
         </p>
     </div>
@@ -682,7 +666,7 @@
     
 
         </main><footer class="footer">
-    <span>&copy; 2023 wuhjie Powered by <a target="_blank" href="https://gohugo.io/">Hugo</a> & <a target="_blank" href="https://github.com/526avijitgupta/gokarna">Gokarna</a>
+    <span>&copy; 2024 wuhjie Powered by <a target="_blank" href="https://gohugo.io/">Hugo</a> & <a target="_blank" href="https://github.com/526avijitgupta/gokarna">Gokarna</a>
     </span>
 </footer>
 </body>
