@@ -301,7 +301,7 @@ For questions or issues, refer to:
 
 **Built with React + TypeScript | Inspired by Minimalist Web Design**
 
-Happy building! 🚀
+```
 import reactDom from 'eslint-plugin-react-dom'
 
 export default defineConfig([
