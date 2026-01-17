@@ -129,6 +129,24 @@
   }
 }
 
+@media (max-width: 900px) {
+  .sidebar {
+    width: 180px;
+    padding: var(--spacing-md) var(--spacing-sm);
+  }
+
+  .avatar {
+    width: 120px;
+    height: 120px;
+  }
+
+  .social-link {
+    font-size: 0.75em;
+    padding: 0.25rem var(--spacing-xs);
+    gap: 0.3rem;
+  }
+}
+
 @media (max-width: 768px) {
   .sidebar {
     position: relative;
@@ -146,6 +164,7 @@
     align-items: center;
     gap: var(--spacing-lg);
     width: 100%;
+    min-height: auto;
   }
 
   .avatar-container {
@@ -163,7 +182,7 @@
     flex-direction: row;
     gap: var(--spacing-xs);
     flex-wrap: wrap;
-    justify-content: flex-start;
+    justify-content: center;
     flex: 1;
   }
 

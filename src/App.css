@@ -42,19 +42,31 @@ main {
   }
 }
 
+@media (max-width: 900px) {
+  .main-content {
+    margin-left: 180px;
+  }
+
+  main {
+    padding: var(--spacing-md) var(--spacing-md);
+  }
+}
+
 /* Tablet */
 @media (max-width: 768px) {
   #root {
     flex-direction: column;
+    min-height: auto;
   }
 
   .app-container {
     flex-direction: column;
+    min-height: auto;
   }
 
   .main-content {
     margin-left: 0;
-    flex: 1;
+    flex: initial;
   }
 
   main {
