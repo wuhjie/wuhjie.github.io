@@ -10,7 +10,7 @@
 }
 
 .hero h2 {
-  font-size: 3.2em;
+  font-size: 1.6em;
   margin: 0 0 var(--spacing-md) 0;
   font-weight: 800;
   letter-spacing: -0.03em;
@@ -88,11 +88,12 @@
   max-width: var(--max-width);
   margin-left: auto;
   margin-right: auto;
+  padding-bottom: var(--spacing-xl);
 }
 
 .content-section h2 {
-  margin-bottom: var(--spacing-lg);
-  padding-bottom: var(--spacing-md);
+  margin: 0;
+  padding: 0 var(--spacing-md) var(--spacing-md) var(--spacing-md);
   border-bottom: 2px solid var(--color-accent);
   position: relative;
 }
@@ -109,13 +110,14 @@
 
 .content-block {
   margin-bottom: var(--spacing-lg);
+  padding: 0 var(--spacing-md) 0 var(--spacing-md);
 }
 
 .content-block h3 {
   margin-bottom: var(--spacing-md);
   font-size: 1.4em;
   position: relative;
-  padding-left: var(--spacing-md);
+  padding-left: var(--spacing-sm);
 }
 
 .content-block h3::before {
