@@ -24,9 +24,9 @@ author:
   avatar           : "wuhjie.jpg"
   name             : "Hongjie Wu"
   pronouns         : # example: "she/her"  
-  bio              : ""
+  bio              : # ""
   location         : "Earth"
-  employer         : ""
+  employer         : # ""
   uri              : # URL
   email            : "wu.hongjie@outlook.com" 
 
