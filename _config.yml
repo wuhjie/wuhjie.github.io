@@ -228,7 +228,7 @@ collections:
 
 # These settings control how pages and collections are included in the site
 defaults:
-  # _posts
+  # _logs
   - scope:
       path: ""
       type: posts
